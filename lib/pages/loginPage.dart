@@ -20,11 +20,12 @@ class _loginPageState extends State<loginPage> {
     final phoneno = TextFormField(
       obscureText: false,
       controller: phonenoController,
+      keyboardType: TextInputType.number,
       validator: (String value){
 //        Pattern pattern =
 //            r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
 //        RegExp regex = new RegExp(pattern);
-        if (value.length != 0)
+        if (value.length != 10)
           return 'Enter Valid phone no';
         else
           return null;
@@ -58,7 +59,7 @@ class _loginPageState extends State<loginPage> {
         .of(context)
         .textTheme
         .subhead
-        .copyWith(color: Colors.black54),);
+        .copyWith(color: Colors.white),);
 
     final loginButon = Material(
       elevation: 5.0,
@@ -93,7 +94,7 @@ class _loginPageState extends State<loginPage> {
         style: Theme
             .of(context)
             .textTheme
-            .subtitle.copyWith(color: Colors.black54)
+            .subtitle.copyWith(color: Colors.white)
     );
 
     final ngo = Text("You are NGO ?",
@@ -101,7 +102,7 @@ class _loginPageState extends State<loginPage> {
         style: Theme
             .of(context)
             .textTheme
-            .subtitle.copyWith(color: Colors.black54)
+            .subtitle.copyWith(color: Colors.white)
     );
 
     final signup = Text("Sign Up",
@@ -109,7 +110,7 @@ class _loginPageState extends State<loginPage> {
         style: Theme
             .of(context)
             .textTheme
-            .subtitle.copyWith(color: Colors.black54, fontWeight: FontWeight.bold)
+            .subtitle.copyWith(color: Colors.white, fontWeight: FontWeight.bold)
     );
 
     final signupNGO = Text("Sign Up",
@@ -117,7 +118,7 @@ class _loginPageState extends State<loginPage> {
         style: Theme
             .of(context)
             .textTheme
-            .subtitle.copyWith(color: Colors.black54, fontWeight: FontWeight.bold)
+            .subtitle.copyWith(color: Colors.white, fontWeight: FontWeight.bold)
     );
 
     return Container(
